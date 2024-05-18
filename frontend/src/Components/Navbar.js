@@ -17,9 +17,9 @@ const navbar= () =>{
     <ChakraProvider>
 
       <HStack justifyContent="space-between" p={4} bg="gray.400">
-        <Image boxSize='50px' src={require("../Assets/logo.png").default} alt='Image Description' />
+        <Image boxSize='50px' src={"/Assets/logo.png"} alt='Image Description' />
 
-        <HStack justify="flex-end" spacing='24px'>
+        <HStack justify="flex-end" spacing='24px' style={{listStyleType: 'none'}}>
           <li>
             <Link to="/">Home</Link>
           </li>

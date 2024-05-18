@@ -7,6 +7,9 @@ import {
   import { Heading, Box, Text, Button, ButtonGroup } from '@chakra-ui/react'
 import {useNavigate} from "react-router-dom"
 import React from 'react';
+import Lottie from 'react-lottie';
+
+// import animationData from "./animations/blockchain_animate_1";
 
 const Home = () =>{
   // React Router for Button 
@@ -14,11 +17,23 @@ const Home = () =>{
   const goToNewPage=()=>{
     navigate("/lessons") // Navigate to the lessons page when 'Get Started' is clicked
   }
+
+  // Lottie animation
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice"
+  //   }
+  // };
+
+
   return (
     <ChakraProvider>
     {/* home page */}
     <Box 
-    display='flex'
+    // display='flex'
   alignItems='center'
   justifyContent='center'
   width='100%'
@@ -32,7 +47,20 @@ const Home = () =>{
     {/* this button should navigate to Lessons page */}
 
     <Text fontSize='2xl'>Building your blockchain knowledege BLOCK BY BLOCK</Text>
-    </Box>
+    {/* <Lottie 
+	    options={defaultOptions}
+        height={400}
+        width={400}
+      /> */}
+    <div class="w-[1000]">
+        <iframe class="w-full h-full" src="https://lottie.host/embed/99f583eb-3c36-444f-bce2-e528a9ba6980/a6tAxVXiKU.json" width="1200" height="600"></iframe>
+    </div>
+    <div class="w-[1000]">
+        <iframe class="w-full h-full" src="https://lottie.host/embed/21db5904-e250-4578-bbed-abb072347647/w73QxfeXKI.json" width="1200" height="600"></iframe>
+    </div>
+
+
+      </Box>
     </ChakraProvider>
   );
 }
