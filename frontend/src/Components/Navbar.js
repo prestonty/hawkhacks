@@ -16,8 +16,11 @@ const navbar= () =>{
   return (
     <ChakraProvider>
 
-      <HStack justifyContent="space-between" p={4} bg="gray.400">
-        <Image boxSize='50px' src={"/Assets/logo.png"} alt='Image Description' />
+      <HStack justifyContent="space-between" p={4} borderBottom='1px' borderColor='gray.200'>
+        <Link to="/">
+          <Image boxSize='50px' src={"/Assets/logo.png"} alt='Image Description' />
+          <p className="inline-block">BlockBrain</p>
+        </Link>
 
         <HStack justify="flex-end" spacing='24px' style={{listStyleType: 'none'}}>
           <li>
@@ -27,7 +30,7 @@ const navbar= () =>{
             <Link to="/Lessons">Lessons</Link>
           </li>
           <li>
-            <Link to="/Collection">Collection</Link>
+            <Link to="/Collection" isLoggedIn="hi">Collection</Link>
           </li>
 
           <AuthProvider authUrl="https://56311028.propelauthtest.com">
