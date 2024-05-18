@@ -19,7 +19,7 @@ const navbar= () =>{
       <HStack justifyContent="space-between" p={4} bg="gray.400">
         <Image boxSize='50px' src={require("../Assets/logo.png").default} alt='Image Description' />
 
-        <HStack justify="flex-end" spacing='24px'>
+        <HStack justify="flex-end" spacing='24px' style={{ listStyleType: 'none' }}>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -29,7 +29,6 @@ const navbar= () =>{
           <li>
             <Link to="/Collection">Collection</Link>
           </li>
-
           <AuthProvider authUrl="https://56311028.propelauthtest.com">
             <Login />
           </AuthProvider>,

@@ -21,7 +21,7 @@ const Collection = () =>{
   // bgRepeat='no-repeat'
   mb={2}
 >
-    <Heading as='h1' size='2xl' p={10} noOfLines={2}>Collections Pag</Heading>
+    <Heading as='h1' size='2xl' p={10} noOfLines={2}>Collections Page</Heading>
     <Button colorScheme='purple' size='md' mx={20} my={10}>Get Started</Button>
 
     <Text fontSize='2xl'>Building your blockchain knowledege BLOCK BY BLOCK</Text>
