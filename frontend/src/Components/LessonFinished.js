@@ -8,7 +8,7 @@ import {
   } from '@chakra-ui/react'
 import { Image, Stack, Heading, Text, Box, HStack, VStack, Button, ButtonGroup } from '@chakra-ui/react'
 
-const LessonContent = ({heading, content}) =>{
+const LessonContent= ({heading, content}) =>{
   return (
     <div>
       <Heading as='h1' size='2xl'pb={10} noOfLines={1}>{heading}</Heading>
