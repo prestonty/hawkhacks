@@ -60,7 +60,7 @@ export default function LessonQuestion(props) {
                                     <Text mb={10} color="black" my={4} fontSize='2xl'>{props.prewrittenAnswer}</Text>
                                 </Box>
 
-                                <LessonAward props={0}/>
+                                <LessonAward props={props.lessonNumber}/>
                             </HStack>
                         </Box>
 

@@ -54,7 +54,7 @@ const Lessons = withAuthInfo((props) =>{
             />
           </TabPanel>
           <TabPanel>
-            <LessonQuestion login={props.user.email} heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."}/>
+            <LessonQuestion login={props.user.email} heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."} lessonNumber={0}/>
           </TabPanel>
 
           {/* Lesson 2 */}
@@ -70,7 +70,7 @@ const Lessons = withAuthInfo((props) =>{
             heading={"WHAT ARE SMART CONTRACTS"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion login={props.user.email} heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."}/>
+            <LessonQuestion login={props.user.email} heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."} lessonNumber={1}/>
           </TabPanel>
 
           {/* Lesson 3 */}
@@ -86,7 +86,7 @@ const Lessons = withAuthInfo((props) =>{
             heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."}/>
+            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."} lessonNumber={2}/>
           </TabPanel>
 
           {/* Lesson 4 */}
@@ -105,7 +105,7 @@ const Lessons = withAuthInfo((props) =>{
             heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."}/>
+            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."} lessonNumber={3}/>
           </TabPanel>
 
         </TabPanels>
