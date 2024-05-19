@@ -32,7 +32,7 @@ export async function checkAnswer(login, question, prewrittenAnswer, userAnswer)
     response = response.toLowerCase().trim();
   
     if(response === "yes." || response === "yes") {
-      axios.post('http://localhost:4000/api/updateLesson/', {
+      await axios.post('http://localhost:4000/api/updateLesson/', {
         email: login // replace with the actual email
       })
       .then((response) => {
