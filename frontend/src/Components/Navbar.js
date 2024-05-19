@@ -19,7 +19,7 @@ const navbar= () =>{
       <HStack justifyContent="space-between" p={4} borderBottom='1px' borderColor='gray.200'>
         <Link to="/">
           <Image boxSize='50px' src={"/Assets/logo.png"} alt='Image Description' />
-          <p className="inline-block">BlockBrain</p>
+          <p className="inline-block">BlockBRAIN</p>
         </Link>
 
         <HStack justify="flex-end" spacing='24px' style={{listStyleType: 'none'}}>
