@@ -36,7 +36,6 @@ async function run() {
   run().catch(console.dir);
 
 app.get('/api/users/:email', async(req,res) =>{
-    console.log('called')
     const userEmail = req.params.email;
     console.log(userEmail);
     const account = await accountCollection.findOne({username:userEmail});
@@ -60,6 +59,16 @@ app.post('/api/updateLesson/:email', async(req, res) => {
   } else {
       res.status(404).send(`No account found for email: ${userEmail}`);
   }
+})
+
+app.post('/api/createUser/:email', async(req, res) => {
+    const userEmail = req.params.email;
+    const result = await accountCollection.insertOne({username: userEmail, lessonsCompleted: 0});
+    if (result.insertedCount > 0) {
+      res.send(`Successfully created account for email: ${userEmail}`);
+    } else {
+      res.status(404).send(`Failed to create account for email: ${userEmail}`);
+    }
 })
 
 app.get('/api/test', async(req,res) =>{

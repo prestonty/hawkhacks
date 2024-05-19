@@ -6,7 +6,7 @@ import {
   } from '@chakra-ui/react'
   import { Heading, Link, VStack, HStack, Box, Text, Button, ButtonGroup,
      Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-import Lesson from '../Components/LessonContent'
+import LessonContent from '../Components/LessonContent'
 import React from 'react';
 
 import LessonAward from '../Components/LessonAward';
@@ -24,13 +24,13 @@ const Lessons = withAuthInfo((props) =>{
             <TabList width="100%" ml={100}>
               <VStack>
                 <Tab width="full">LESSON 1</Tab>
-                <Tab wdith="full">QUIZ 1</Tab>
-                <Tab wdith="full">LESSON 2</Tab>
-                <Tab wdith="full">QUIZ 2</Tab>
-                <Tab wdith="full">LESSON 3</Tab>
-                <Tab wdith="full">QUIZ 3</Tab>
-                {/* <Tab wdith="full">LESSON 4</Tab>
-                <Tab wdith="full">QUIZ 4</Tab> */}
+                <Tab width="full">QUIZ 1</Tab>
+                <Tab width="full">LESSON 2</Tab>
+                <Tab width="full">QUIZ 2</Tab>
+                <Tab width="full">LESSON 3</Tab>
+                <Tab width="full">QUIZ 3</Tab>
+                <Tab width="full">LESSON 4</Tab>
+                <Tab width="full">QUIZ 4</Tab> 
               </VStack>
           </TabList>
         </Box>
@@ -39,7 +39,7 @@ const Lessons = withAuthInfo((props) =>{
         <TabPanels ml={100}>
           {/* Lesson 1 */}
           <TabPanel>
-            <Lesson
+            <LessonContent
               content={
                 "A blockchain is a distributed ledger (a database synchronized and accessible across different sites by various people) and is open to everyone! Let’s break down some terms: \n \n "+
                 "     - Block: Each “block” irepresents a box that holds data, a hash, and the previous block's hash. The data can vary based on the purpose of the blockchain (e.g. storing information about transactions). \n" + 
@@ -51,6 +51,7 @@ const Lessons = withAuthInfo((props) =>{
                 "To make blockchains more secure, there is a P2P network (peer 2 peer network). Everyone gets their own copy of the blockchain and when a new block is created, it is verified by every one person’s blockchain to agree on which blocks are valid or not. \n" 
               }
               heading={"WHAT IS BLOCKCHAIN"}
+              imageSrc={"/Assets/lesson-images/BlockChain.PNG"}
             />
           </TabPanel>
           <TabPanel>
@@ -59,7 +60,7 @@ const Lessons = withAuthInfo((props) =>{
 
           {/* Lesson 2 */}
           <TabPanel>
-            <Lesson content={
+            <LessonContent content={
               "Smart contracts are just like contracts in the real world, except it is completely digital. Smart contracts are essentially tiny programs stored inside a blockchain.\n \n "+
               "A common example is fundraising. Let's say you have a group of people who want to fund a project. Kickstarter serves as a middleman, ensuring the people’s money goes to the project / they get a refund should the project fail and ensuring people running the project get their money. \n \n " + 
               "This, however, can be replaced by a smart contract, therefore eliminating the need for a third party. We can program a smart contract to accept money from the people and pass the money to the project only if it succeeds." + 
@@ -67,7 +68,9 @@ const Lessons = withAuthInfo((props) =>{
               "Some applications of this could be to make royalty payments easier for the music industry and banks could use it to issue loans. "
             } 
             
-            heading={"WHAT ARE SMART CONTRACTS"}/>
+            heading={"WHAT ARE SMART CONTRACTS"}
+            imageSrc={"/Assets/lesson-images/contractEx.png"}
+            />
           </TabPanel>
           <TabPanel>
             <LessonQuestion login={props.user.email} heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."} lessonNumber={1}/>
@@ -75,7 +78,7 @@ const Lessons = withAuthInfo((props) =>{
 
           {/* Lesson 3 */}
           <TabPanel>
-            <Lesson content={
+            <LessonContent content={
               "In the realm of blockchain technology, public and private keys are vital cryptographic elements used to ensure security and facilitate transactions. Picture them as a digital lock and key mechanism.\n\n" +
               "Public keys are like your username or address in the blockchain network, accessible to anyone. They serve as your identity, allowing others to send you cryptocurrency or verify your transactions. However, they can\'t be used to reverse-engineer your private key.\n\n" +
               "Private keys, on the other hand, are akin to your password or PIN. They are kept secret and are known only to you. With the private key, you can access and control your digital assets stored on the blockchain. It\'s crucial to safeguard your private key diligently because whoever possesses it gains control over your assets.\n\n" +
@@ -83,7 +86,9 @@ const Lessons = withAuthInfo((props) =>{
               "In essence, public and private keys work together to ensure secure and authenticated transactions within the blockchain network, fostering trust and reliability in a decentralized ecosystem.\n\n"
             } 
             
-            heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
+            heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}
+            imageSrc={"/Assets/lesson-images/Keys.PNG"}
+            />
           </TabPanel>
           <TabPanel>
             <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."} lessonNumber={2}/>
@@ -91,7 +96,7 @@ const Lessons = withAuthInfo((props) =>{
 
           {/* Lesson 4 */}
           <TabPanel>
-            <Lesson content={
+            <LessonContent content={
               
 "NFTs, or Non-Fungible Tokens, are the digital Mona Lisas of the blockchain world. Unlike the dollar bills in your wallet (which are all the same), NFTs are unique, like a fingerprint or that one sock you can never find a match for.\n\n" +
 
@@ -102,10 +107,12 @@ const Lessons = withAuthInfo((props) =>{
 "Just remember, while NFTs may seem like magic internet money, they\'re actually backed by some serious tech and a whole lot of creativity. So go ahead, dive into the NFT rabbit hole, and let your digital adventures begin!\n\n"
             } 
             
-            heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
+            heading={"WHAT ARE NFTs"}
+            imageSrc={"/Assets/lesson-images/NFT.PNG"}
+            />
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."} lessonNumber={3}/>
+            <LessonQuestion heading={"WHAT ARE NFTs"} question={"What are NFTs?"} prewrittenAnswer={"NFTs are unique digital assets stored on blockchains, representing ownership of digital content or collectibles."} lessonNumber={3}/>
           </TabPanel>
 
         </TabPanels>

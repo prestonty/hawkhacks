@@ -22,12 +22,29 @@ const Collection = withAuthInfo((props) => {
     if (props.user) {
       axios.get(`http://localhost:4000/api/users/${props.user.email}`)
         .then((response) => {
+          console.log("success")
           console.log(response.data);
           setResponseData(response.data);
           setLessonsCompleted(response.data.lessonsCompleted)
         })
         .catch((error) => {
-          console.log(error);
+          console.log('error!')
+          if (error.response.status === 404) {
+            console.log('ran error')
+            // If a 404 status is returned, create a new account
+            const newAccount = { email: props.user.email, lessonsCompleted: 0 };
+            axios.post(`/api/createUser/`, newAccount)
+              .then(response => {
+                // Handle the response data...
+                console.log(response.data);
+              })
+              .catch(error => {
+                console.log(error);
+              });
+          }
+          else{
+            console.log(error);
+          }
         });
     }
   }, [props.user]);
@@ -37,8 +54,7 @@ const Collection = withAuthInfo((props) => {
       return (
         <ChakraProvider>
           <Heading as='h1' size='2xl' p={10} noOfLines={1}>COLLECTION</Heading>
-          <Text p={10}>{props.user.email}</Text>
-          <Text pl={10}>You have completed {lessonsCompleted} lessons</Text>
+          <Text fontSize='2xl' pl={10}>You have completed {lessonsCompleted} lessons</Text>
 
           <HStack>
             {[...Array(lessonsCompleted)].map((_, index) => (

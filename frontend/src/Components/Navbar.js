@@ -22,15 +22,15 @@ const navbar= () =>{
           <p className="inline-block">BlockBRAIN</p>
         </Link>
 
-        <HStack justify="flex-end" spacing='24px' style={{listStyleType: 'none'}}>
+        <HStack justify="flex-end" spacing='50px' style={{listStyleType: 'none'}}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"  style={{ fontSize: '20px' }}>HOME</Link>
           </li>
           <li>
-            <Link to="/Lessons">Lessons</Link>
+            <Link to="/Lessons" style={{ fontSize: '20px' }}>LESSONS</Link>
           </li>
           <li>
-            <Link to="/Collection">Collection</Link>
+            <Link to="/Collection" style={{ fontSize: '20px' }}>COLLECTION</Link>
           </li>
 
           <AuthProvider authUrl="https://56311028.propelauthtest.com">

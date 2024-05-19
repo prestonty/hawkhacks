@@ -39,7 +39,7 @@ const Home = () =>{
         <Box my={0}>
           <Heading as='h1' fontSize={"100px"} pl={10} py={2} noOfLines={2} mx={2} mt={100}>BlockBRAIN</Heading>
 
-          <Text fontSize='2xl' pl={10} py={2} mx={2} my={2} >Introducing a Decentralized Blockchain Education Platform Designed To Build Your Blockchain Knowledge <span style={{fontWeight: 'bold'}}>Block</span> BY <span style={{fontWeight: 'bold'}}>Block</span></Text>
+          <Text fontSize='2xl' pl={10} py={2} mx={2} my={2} >Introducing the First Blockchain Education Platform Designed To Build Your Blockchain Knowledge <span style={{fontWeight: 'bold'}}>Block</span> BY <span style={{fontWeight: 'bold'}}>Block</span></Text>
 
           <Button color="#EEEEEE" bg='#6868F7' size='lg' px={12} py={8} ml={10} my={10} onClick={() => goToNewPage()}>Get Started</Button>
 

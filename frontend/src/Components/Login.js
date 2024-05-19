@@ -29,7 +29,7 @@ const Login = withAuthInfo((props) => {
             <ChakraProvider>
                 <Menu>
                 <MenuButton as={Button}>
-                    <Image borderRadius='full' boxSize='30px' src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+                    <Image borderRadius='full' boxSize='30px' src={"/Assets/profilePic.png"} alt='Dan Abramov' />
                 </MenuButton>
                 <MenuList>
                     <MenuItem>
@@ -50,7 +50,7 @@ const Login = withAuthInfo((props) => {
             <ChakraProvider>
                 <Menu>
                 <MenuButton as={Button}>
-                     <Image borderRadius='full' boxSize='30px' src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+                     <Image borderRadius='full' boxSize='30px' src={"/Assets/profilePic.png"} alt='Dan Abramov' />
                 </MenuButton>
                 <MenuList>
                     <MenuItem>
