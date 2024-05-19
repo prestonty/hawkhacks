@@ -32,8 +32,7 @@ const Collection = withAuthInfo((props) => {
           if (error.response.status === 404) {
             console.log('ran error')
             // If a 404 status is returned, create a new account
-            const newAccount = { email: props.user.email, lessonsCompleted: 0 };
-            axios.post(`/api/createUser/`, newAccount)
+            axios.post(`http://localhost:4000/api/createUser/${props.user.email}`)
               .then(response => {
                 // Handle the response data...
                 console.log(response.data);

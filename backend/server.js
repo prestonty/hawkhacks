@@ -62,6 +62,7 @@ app.post('/api/updateLesson/:email', async(req, res) => {
 })
 
 app.post('/api/createUser/:email', async(req, res) => {
+    console.log('ran create')
     const userEmail = req.params.email;
     const result = await accountCollection.insertOne({username: userEmail, lessonsCompleted: 0});
     if (result.insertedCount > 0) {
