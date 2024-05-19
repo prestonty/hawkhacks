@@ -49,6 +49,19 @@ app.get('/api/users/:email', async(req,res) =>{
     }
 })
 
+app.post('/api/updateLesson/:email', async(req, res) => {
+    const userEmail = req.params.email;
+    const result = await accountCollection.updateOne(
+      { username: userEmail }, 
+      { $inc: { lessonsCompleted: 1} }
+  );
+  if (result.matchedCount > 0) {
+    res.send(`Successfully updated lessonsCompleted for email: ${userEmail}`);
+  } else {
+      res.status(404).send(`No account found for email: ${userEmail}`);
+  }
+})
+
 app.get('/api/test', async(req,res) =>{
   res.send('Hello World!')
 })

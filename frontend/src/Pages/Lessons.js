@@ -11,8 +11,9 @@ import React from 'react';
 
 import LessonAward from '../Components/LessonAward';
 import LessonQuestion from "../Components/LessonQuestion";
+import { withAuthInfo, useRedirectFunctions, useLogoutFunction } from '@propelauth/react'
 
-const Lessons = () =>{
+const Lessons = withAuthInfo((props) =>{
   return (
     <ChakraProvider>
     <Box display='flex' alignItems='center' justifyContent='center' width='100%' mb={10}>
@@ -51,7 +52,7 @@ const Lessons = () =>{
             />
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."}/>
+            <LessonQuestion login={props.user.email} heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."}/>
           </TabPanel>
 
           {/* Lesson 2 */}
@@ -67,7 +68,7 @@ const Lessons = () =>{
             heading={"WHAT ARE SMART CONTRACTS"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."}/>
+            <LessonQuestion login={props.user.email} heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."}/>
           </TabPanel>
 
           {/* Lesson 3 */}
@@ -107,5 +108,5 @@ const Lessons = () =>{
     </Tabs>
     </ChakraProvider>
   );
-}
+});
 export default Lessons;

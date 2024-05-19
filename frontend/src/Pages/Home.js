@@ -54,8 +54,8 @@ const Home = () =>{
 
         
       <Box display="flex" justifyContent='center' width='100%'>
-          <Card ml="10" mb="10" bg="#A167A5" boxShadow="md">
-            <CardBody width="750px" height="450px">
+          <Card ml="10" mb="10" bg="#A167A5" boxShadow="md"  width="750px" height="250px">
+            <CardBody>
               <Text color="white" fontSize='2xl' pl={10} py={2} mx={2} my={5} ><span style={{fontWeight: 'bold'}}>LACK OF BLOCKCHAIN KNOWLEDGE</span></Text>
               <Text color="white" fontSize='xl' pl={10} py={2} mx={2} my={5} >Through a survey conducted at HawkHacks, <span style={{fontWeight: 'bold'}}>9/10</span> developers never touched blockchain before.</Text>
             </CardBody>
