@@ -23,9 +23,9 @@ const Lessons = () =>{
             <TabList width="100%" ml={100}>
               <VStack>
                 <Tab width="full">LESSON 1</Tab>
+                <Tab wdith="full">QUIZ 1</Tab>
                 <Tab wdith="full">LESSON 2</Tab>
-                <Tab wdith="full">LESSON 3</Tab>
-                <Tab wdith="full">LESSON 4</Tab>
+                <Tab wdith="full">QUIZ 2</Tab>
               </VStack>
           </TabList>
         </Box>

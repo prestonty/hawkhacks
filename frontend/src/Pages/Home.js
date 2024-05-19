@@ -53,14 +53,14 @@ const Home = () =>{
         <Text fontSize='2xl' pl={10} py={2} mx={2} my={2} >Building your blockchain knowledge <span style={{fontWeight: 'bold'}}>Block</span> by <span style={{fontWeight: 'bold'}}>Block</span></Text>
 
         <Button color="#EEEEEE" bg='#6868F7' size='lg' px={12} py={8} ml={10} my={10} onClick={() => goToNewPage()}>Get Started</Button>
-        <Card ml="10" mb="10" bg="#97266D">
+        <Card ml="10" mb="10" bg="#6868F7" boxShadow="md">
           <CardBody>
             <Text color="white" fontSize='xl' pl={10} py={2} mx={2} my={5} >Through a survey conducted at HawkHacks, <span style={{fontWeight: 'bold'}}>9/10</span> developers never touched blockchain before.</Text>
           </CardBody>
         </Card>
-        <Card ml="10" bg="tomato">
+        <Card ml="10" bg="#6868F7" boxShadow="md">
           <CardBody>
-            <Text fontSize='xl' pl={10} py={2} mx={2} my={10} >Blockbrain <span style={{fontWeight: 'bold'}}>gamifies</span> the learning experience and uncovers common misconceptions about the applicatins of blockchain, including NFTs, cryptocurrency, online transactions, and cybersecurity!</Text>
+            <Text fontSize='xl' color="white" pl={10} py={2} mx={2} my={10} >Blockbrain <span style={{fontWeight: 'bold'}}>gamifies</span> the learning experience and uncovers common misconceptions about the applicatins of blockchain, including NFTs, cryptocurrency, online transactions, and cybersecurity!</Text>
           </CardBody>
         </Card>
 
@@ -84,10 +84,12 @@ const Home = () =>{
       <Box ml={20} mr={60}>
         <iframe class="w-full h-full" src="https://lottie.host/embed/21db5904-e250-4578-bbed-abb072347647/w73QxfeXKI.json" width="400" height="500"></iframe>
       </Box>
-      <Box>
-      <Text fontSize='lg' px={4} py={10} mx={2} my={2} noOfLines={8} mr={56} >Blockbrain stands out as a premier blockchain education platform due to its comprehensive yet accessible approach to learning. Its courses are tailored to suit beginners, offering a well-paced curriculum that covers an extensive array of topics. From fundamental concepts to advanced techniques, Blockbrain ensures that learners receive a holistic understanding of blockchain technology.</Text>
-      <Text fontSize='lg' px={4} py={10} mx={2} my={2} noOfLines={8} mr={56} >Our online assessments include short answer questions that are analyzed and scored based off <span style={{fontWeight: 'bold'}}>artificial intelligence powered by Cohere</span>.</Text>
-      </Box>
+      <Card ml="10" bg="#b3b3fb" boxShadow="md" w={700} mr={56}>
+          <CardBody>
+      <Text fontSize='lg' px={4} py={10} mx={2} my={2} noOfLines={8} mr={5} >Blockbrain stands out as a premier blockchain education platform due to its comprehensive yet accessible approach to learning. Its courses are tailored to suit beginners, offering a well-paced curriculum that covers an extensive array of topics. From fundamental concepts to advanced techniques, Blockbrain ensures that learners receive a holistic understanding of blockchain technology.</Text>
+      <Text fontSize='lg' px={4} py={10} mx={2} my={2} noOfLines={8} mr={5} >Our online assessments include short answer questions that are analyzed and scored based off <span style={{fontWeight: 'bold'}}>artificial intelligence powered by Cohere</span>.</Text>
+      </CardBody>
+      </Card>
     </Box>
   </ChakraProvider>
   );

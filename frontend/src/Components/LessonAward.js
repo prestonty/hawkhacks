@@ -15,7 +15,7 @@ const LessonAward = ({props}) =>{
   const item = data[props];
   return (
     <ChakraProvider>
-      <Card maxW='sm' m={10} _hover={{ bg: "gray.200" , transform: "translateY(-15px)", transition: "transform 0.3s ease-in-out"}}>
+      <Card maxW='sm' m={10} _hover={{ transform: "translateY(-15px)", transition: "transform 0.3s ease-in-out"}}>
           <CardBody>
             <Image src={item.source} borderRadius='lg'/>
               <Stack mt='6' spacing='3'>
