@@ -16,6 +16,7 @@ const Collection = withAuthInfo((props) => {
   const logoutFunction = useLogoutFunction()
   const { redirectToLoginPage, redirectToSignupPage, redirectToAccountPage } = useRedirectFunctions()
   const [responseData, setResponseData] = useState("");
+  const [lessonsCompleted, setLessonsCompleted] = useState(0);
 
   useEffect(() => {
     if (props.user) {
@@ -23,6 +24,7 @@ const Collection = withAuthInfo((props) => {
         .then((response) => {
           console.log(response.data);
           setResponseData(response.data);
+          setLessonsCompleted(response.data.lessonsCompleted)
         })
         .catch((error) => {
           console.log(error);
@@ -36,11 +38,10 @@ const Collection = withAuthInfo((props) => {
         <ChakraProvider>
           <Heading as='h1' size='2xl' p={10} noOfLines={1}>COLLECTION</Heading>
           <Text p={10}>{props.user.email}</Text>
-          <Text>{props.user.hasPassword ? "Has a password" : "No Password!?"}</Text>
-          <Text>{responseData}</Text>
+          <Text pl={10}>You have completed {lessonsCompleted} lessons</Text>
 
           <HStack>
-            {[...Array(3)].map((_, index) => (
+            {[...Array(lessonsCompleted)].map((_, index) => (
               //to change the numbers of cards displayed, change the hard coded value, 3
               <LessonAward key={index} props={index} />
             ))}

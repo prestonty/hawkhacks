@@ -24,7 +24,7 @@ async function run() {
       await client.connect();
       // Access the accounts database and the accounts collection
       const db = client.db("accounts");
-      accountCollection = db.collection("account");
+      accountCollection = db.collection("accounts");
 
       // Send a ping to confirm a successful connection
       await client.db("admin").command({ ping: 1 });
@@ -39,7 +39,7 @@ app.get('/api/users/:email', async(req,res) =>{
     console.log('called')
     const userEmail = req.params.email;
     console.log(userEmail);
-    const account = await accountCollection.findOne({username: `${userEmail}`});
+    const account = await accountCollection.findOne({username:userEmail});
     if (account) {
       console.log(account);
       res.send(account);
