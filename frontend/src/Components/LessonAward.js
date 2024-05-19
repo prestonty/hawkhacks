@@ -15,7 +15,7 @@ const LessonAward = ({props}) =>{
   const item = data[props];
   return (
     <ChakraProvider>
-      <Card maxW='sm' m={10} _hover={{ bg: "gray.200" , transform: "translateY(-15px)", transition: "transform 0.2s ease-in, transform 0.2s ease-out"}}>
+      <Card maxW='sm' m={10} _hover={{ bg: "gray.200" , transform: "translateY(-15px)", transition: "transform 0.3s ease-in-out"}}>
           <CardBody>
             <Image src={item.source} borderRadius='lg'/>
               <Stack mt='6' spacing='3'>
@@ -32,14 +32,3 @@ const LessonAward = ({props}) =>{
   );
 }
 export default LessonAward;
-
-
-/*
-          <Box alignItems='center' justifyContent='center' width='100%' mb={10}>
-
-
-            <Text fontSize="2xl" mb={10}> {item.title} </Text>
-            <Image boxSize='350px' src={item.source} alt='Image Description' />
-            <p>{item.desc}</p>
-            <a href={item.link} target="_blank" rel="noopener noreferrer"> Claim your NFT</a>
-          </Box>*/

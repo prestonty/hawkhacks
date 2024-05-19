@@ -48,6 +48,9 @@ const Lessons = () =>{
             />
           </TabPanel>
           <TabPanel>
+            <LessonQuestion heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."}/>
+          </TabPanel>
+          <TabPanel>
             <Lesson content={
               "Smart contracts are just like contracts in the real world, except it is completely digital. Smart contracts are essentially tiny programs stored inside a blockchain.\n \n "+
               "A common example is fundraising. Let's say you have a group of people who want to fund a project. Kickstarter serves as a middleman, ensuring the people’s money goes to the project / they get a refund should the project fail and ensuring people running the project get their money. \n \n " + 
@@ -59,11 +62,6 @@ const Lessons = () =>{
             heading={"WHAT ARE SMART CONTRACTS"}/>
           </TabPanel>
           <TabPanel>
-            {/* question here for now */}
-            <LessonQuestion heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."}/>
-          </TabPanel>
-          <TabPanel>
-            {/* question here for now */}
             <LessonQuestion heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."}/>
           </TabPanel>
 

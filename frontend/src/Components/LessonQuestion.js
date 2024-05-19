@@ -64,12 +64,20 @@ export default function LessonQuestion(props) {
                         size='xl'
                     />
                     )}
+                    <Box style={{ display: 'inline-block' }} mt={40}>
                     {result === 1 && loading === false && (
                     <Text mt={4} mb={10} color="#6868F7" as='b' fontSize='5xl'>You are CORRECT!</Text>
                     )}
-                    {result === 0 && loading === false && (
-                    <Text mt={4} color="#6868F7" as='b' fontSize='5xl'>You are WRONG!</Text>
+                    {result === 1 && loading === false && (
+                    <Text color="#6868F7" mt={4} fontSize='3xl'>Our answer is:</Text>
                     )}
+                    {result === 1 && loading === false && (
+                    <Text mb={10} color="#6868F7" my={4} fontSize='2xl'>{props.prewrittenAnswer}</Text>
+                    )}
+                    {result === 0 && loading === false && (
+                    <Text color="#6868F7" as='b' fontSize='5xl'>You are WRONG!</Text>
+                    )}
+                    </Box>
                 </Box>
             </Box>
         </ChakraProvider>
