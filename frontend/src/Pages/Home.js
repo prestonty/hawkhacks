@@ -86,6 +86,7 @@ const Home = () =>{
       </Box>
       <Box>
       <Text fontSize='lg' px={4} py={10} mx={2} my={2} noOfLines={8} mr={56} >Blockbrain stands out as a premier blockchain education platform due to its comprehensive yet accessible approach to learning. Its courses are tailored to suit beginners, offering a well-paced curriculum that covers an extensive array of topics. From fundamental concepts to advanced techniques, Blockbrain ensures that learners receive a holistic understanding of blockchain technology.</Text>
+      <Text fontSize='lg' px={4} py={10} mx={2} my={2} noOfLines={8} mr={56} >Our online assessments include short answer questions that are analyzed and scored based off <span style={{fontWeight: 'bold'}}>artificial intelligence powered by Cohere</span>.</Text>
       </Box>
     </Box>
   </ChakraProvider>

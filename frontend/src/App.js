@@ -22,18 +22,21 @@ import Home from "./Pages/Home";
 import Lessons from "./Pages/Lessons";
 import Collection from "./Pages/Collection";
 
+import { AuthProvider } from "@propelauth/react";
 export default function App() {
   // 2. Wrap ChakraProvider at the root of your app
   return (
     <Router>
     <ChakraProvider>
+      <AuthProvider authUrl="https://56311028.propelauthtest.com">
       {/* navbar IMPLEMENT ROUTING */}
       <Navbar/>
       <Routes>
-        <Route path="/" exact element={<Home />}/>
+        <Route path="/" exact element={<Home header={"sdlfsdjkfjs"} />}/>
         <Route path="/Lessons" exact element={<Lessons/>}/>
         <Route path="/Collection" exact element={<Collection/>}/>
       </Routes>
+      </AuthProvider>
     </ChakraProvider>
     </Router>
   ) 

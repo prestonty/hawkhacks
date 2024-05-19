@@ -30,7 +30,7 @@ const navbar= () =>{
             <Link to="/Lessons">Lessons</Link>
           </li>
           <li>
-            <Link to="/Collection" isLoggedIn="hi">Collection</Link>
+            <Link to="/Collection">Collection</Link>
           </li>
 
           <AuthProvider authUrl="https://56311028.propelauthtest.com">
