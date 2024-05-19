@@ -23,7 +23,7 @@ export default function LessonQuestion(props) {
         try {
             setLoading(true);
             // Call the checkAnswer function with the provided arguments
-            const similarity = await checkAnswer(props.question, props.prewrittenAnswer, answer);
+            const similarity = await checkAnswer(props.login, props.question, props.prewrittenAnswer, answer);
             // Update the result state based on the similarity result
             setResult(similarity);
         } catch (error) {
