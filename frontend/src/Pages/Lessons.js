@@ -29,6 +29,8 @@ const Lessons = withAuthInfo((props) =>{
                 <Tab wdith="full">QUIZ 2</Tab>
                 <Tab wdith="full">LESSON 3</Tab>
                 <Tab wdith="full">QUIZ 3</Tab>
+                {/* <Tab wdith="full">LESSON 4</Tab>
+                <Tab wdith="full">QUIZ 4</Tab> */}
               </VStack>
           </TabList>
         </Box>
@@ -84,17 +86,20 @@ const Lessons = withAuthInfo((props) =>{
             heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."}/>
+            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."}/>
           </TabPanel>
 
           {/* Lesson 4 */}
           <TabPanel>
             <Lesson content={
-              "In the realm of blockchain technology, public and private keys are vital cryptographic elements used to ensure security and facilitate transactions. Picture them as a digital lock and key mechanism.\n\n" +
-              "Public keys are like your username or address in the blockchain network, accessible to anyone. They serve as your identity, allowing others to send you cryptocurrency or verify your transactions. However, they can\'t be used to reverse-engineer your private key.\n\n" +
-              "Private keys, on the other hand, are akin to your password or PIN. They are kept secret and are known only to you. With the private key, you can access and control your digital assets stored on the blockchain. It\'s crucial to safeguard your private key diligently because whoever possesses it gains control over your assets.\n\n" +
-              "Here\'s how it works: when you initiate a transaction, you use your private key to create a digital signature. This signature, along with your public key, validates the transaction\'s authenticity. Once verified by the network, the transaction is added to the blockchain.\n\n" +
-              "In essence, public and private keys work together to ensure secure and authenticated transactions within the blockchain network, fostering trust and reliability in a decentralized ecosystem.\n"
+              
+"NFTs, or Non-Fungible Tokens, are the digital Mona Lisas of the blockchain world. Unlike the dollar bills in your wallet (which are all the same), NFTs are unique, like a fingerprint or that one sock you can never find a match for.\n\n" +
+
+"They\'re created using smart contracts on blockchain platforms like Ethereum, which basically means they\'re super secure and can\'t be messed with, unlike that one time your little brother \"borrowed\" your favorite game and returned it scratched.\n\n" +
+
+"These tokens can represent anything from digital art to virtual real estate, making them the cool kids on the blockchain block. So, when you buy an NFT, you\'re not just getting a file, you\'re getting a digital masterpiece with a fancy certificate of authenticity.\n\n" +
+
+"Just remember, while NFTs may seem like magic internet money, they\'re actually backed by some serious tech and a whole lot of creativity. So go ahead, dive into the NFT rabbit hole, and let your digital adventures begin!\n\n"
             } 
             
             heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
