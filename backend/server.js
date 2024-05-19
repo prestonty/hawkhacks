@@ -1,5 +1,5 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = `mongodb+srv://hh:hawkHacks24@cluster1.tajctak.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1`;
+const uri = `mongodb+srv://hh:*******@cluster1.tajctak.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1`;
 
 //const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster1.tajctak.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1`;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -17,20 +17,20 @@ const cors = require('cors');
 app.use(cors());
 const port = 4000
 
+let accountCollection;
 async function run() {
     try {
       // Connect the client to the server	(optional starting in v4.7)
       await client.connect();
       // Access the accounts database and the accounts collection
       const db = client.db("accounts");
-      const accountCollection = db.collection("account");
+      accountCollection = db.collection("accounts");
 
       // Send a ping to confirm a successful connection
       await client.db("admin").command({ ping: 1 });
       console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    } finally {
-      // Ensures that the client will close when you finish/error
-      await client.close();
+    } catch(error) {
+        console.log(error);
     }
   }
   run().catch(console.dir);
@@ -38,8 +38,15 @@ async function run() {
 app.get('/api/users/:email', async(req,res) =>{
     console.log('called')
     const userEmail = req.params.email;
-    const account = await accountCollection.findOne({email: `${userEmail}`});
-    res.send('Hello World!')
+    console.log(userEmail);
+    const account = await accountCollection.findOne({username:userEmail});
+    if (account) {
+      console.log(account);
+      res.send(account);
+    } else {
+      console.log(`No account found for email: ${userEmail}`);
+      res.status(404).send(`No account found for email: ${userEmail}`);
+    }
 })
 
 app.get('/api/test', async(req,res) =>{
