@@ -1,7 +1,8 @@
+import axios from 'axios';
+
 export async function checkAnswer(login, question, prewrittenAnswer, userAnswer) {
     // Dynamically import CohereClient
     const { CohereClient } = await import("cohere-ai");
-    const axios = require('axios');
   
     const cohere = new CohereClient({
       token: "FDZGRUFzO3ChEAmnf76uJrPNHbIgV9ai8pTltdAS", // This is your trial API key
@@ -32,16 +33,22 @@ export async function checkAnswer(login, question, prewrittenAnswer, userAnswer)
     response = response.toLowerCase().trim();
   
     if(response === "yes." || response === "yes") {
-      axios.post('http://localhost:4000/api/updateLesson/', {
-        email: login // replace with the actual email
-      })
-      .then((response) => {
-          console.log(response.data);
-      })
-      .catch((error) => {
-          console.error(`Error: ${error}`);
-      });
-      return 1;
+    try {
+        axios.post(`http://localhost:4000/api/updateLesson/${login}`, {})
+        .then((response) => {
+            console.log(response.data);
+        })
+        .catch((error) => {
+            console.error(`Error: ${error}`);
+        });
+        console.log("POST request successful");
+        return 1;
+      } catch (error) {
+        console.error(`Error: ${error}`);
+        console.log(login);
+        return 1; // or handle error appropriately
+      }
+
     }
     else if(response === "no." || response === "no") {
       return 0;

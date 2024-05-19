@@ -81,7 +81,12 @@ const Home = () =>{
         <Box ml={20} mr={60}>
           <iframe class="w-full h-full" src="https://lottie.host/embed/21db5904-e250-4578-bbed-abb072347647/w73QxfeXKI.json" width="400" height="500"></iframe>
         </Box>
-         <Heading as='h1' fontSize={"50px"} pl={10} py={2} mx={2} mt={100}>READY TO LEARN SOMETHING AMAZING?</Heading>
+
+        <VStack>
+           <Heading as='h1' fontSize={"80px"} pl={10} py={2} mx={2} mt={100}>READY TO LEARN SOMETHING AMAZING?</Heading>
+        </VStack>
+
+        
     </Box>
   </Box>
   </ChakraProvider>

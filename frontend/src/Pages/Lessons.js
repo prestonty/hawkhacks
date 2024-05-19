@@ -24,13 +24,13 @@ const Lessons = withAuthInfo((props) =>{
             <TabList width="100%" ml={100}>
               <VStack>
                 <Tab width="full">LESSON 1</Tab>
-                <Tab wdith="full">QUIZ 1</Tab>
-                <Tab wdith="full">LESSON 2</Tab>
-                <Tab wdith="full">QUIZ 2</Tab>
-                <Tab wdith="full">LESSON 3</Tab>
-                <Tab wdith="full">QUIZ 3</Tab>
-                {/* <Tab wdith="full">LESSON 4</Tab>
-                <Tab wdith="full">QUIZ 4</Tab> */}
+                <Tab width="full">QUIZ 1</Tab>
+                <Tab width="full">LESSON 2</Tab>
+                <Tab width="full">QUIZ 2</Tab>
+                <Tab width="full">LESSON 3</Tab>
+                <Tab width="full">QUIZ 3</Tab>
+                <Tab width="full">LESSON 4</Tab>
+                <Tab width="full">QUIZ 4</Tab>
               </VStack>
           </TabList>
         </Box>
@@ -54,7 +54,7 @@ const Lessons = withAuthInfo((props) =>{
             />
           </TabPanel>
           <TabPanel>
-            <LessonQuestion login={props.user.email} heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."}/>
+            <LessonQuestion login={props.user.email} heading={"WHAT IS BLOCKCHAIN"} question={"What is Blockchain?"} prewrittenAnswer={"Blockchain is a decentralized, immutable ledger technology used for secure and transparent recording of transactions across multiple parties."} lessonNumber={0}/>
           </TabPanel>
 
           {/* Lesson 2 */}
@@ -70,7 +70,7 @@ const Lessons = withAuthInfo((props) =>{
             heading={"WHAT ARE SMART CONTRACTS"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion login={props.user.email} heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."}/>
+            <LessonQuestion login={props.user.email} heading={"WHAT IS SMART CONTRACTS"} question={"What is a smart contract?"} prewrittenAnswer={"Smart contracts are digital contracts stored on a blockchain that are automatically executed when predetermined terms and conditions are met."} lessonNumber={1}/>
           </TabPanel>
 
           {/* Lesson 3 */}
@@ -86,7 +86,7 @@ const Lessons = withAuthInfo((props) =>{
             heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."}/>
+            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."} lessonNumber={2}/>
           </TabPanel>
 
           {/* Lesson 4 */}
@@ -102,10 +102,10 @@ const Lessons = withAuthInfo((props) =>{
 "Just remember, while NFTs may seem like magic internet money, they\'re actually backed by some serious tech and a whole lot of creativity. So go ahead, dive into the NFT rabbit hole, and let your digital adventures begin!\n\n"
             } 
             
-            heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"}/>
+            heading={"WHAT ARE NFTs"}/>
           </TabPanel>
           <TabPanel>
-            <LessonQuestion heading={"WHAT ARE PUBLIC AND PRIVATE KEYS"} question={"What are public and private keys?"} prewrittenAnswer={"Public keys are like usernames, shared openly. Private keys are secret passwords, used for access and control."}/>
+            <LessonQuestion heading={"WHAT ARE NFTs"} question={"What are NFTs?"} prewrittenAnswer={"NFTs are unique digital assets representing ownership or proof of authenticity for items like art, music, or collectibles."} lessonNumber={3}/>
           </TabPanel>
 
         </TabPanels>
